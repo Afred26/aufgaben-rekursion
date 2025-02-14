@@ -23,8 +23,5 @@ func BinomialCoefficientPascal(n, k int) int {
 	if n == 0 || k == 0 {
 		return 1
 	}
-	p := BinomialCoefficientPascal(n-1, k)
-	q := BinomialCoefficientPascal(n-1, k-1)
-	return p + q
-
+	return BinomialCoefficientPascal(n-1, k) + BinomialCoefficientPascal(n-1, k-1)
 }
